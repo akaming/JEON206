@@ -378,7 +378,7 @@ ES6 에서 새로 도입한 해체 할당
     let a, b, c;
 
     {a,b,c} = obj;          //에러
-    {{a,b,c} = obj};       //동작
+    ({a,b,c} = obj);       //동작
 ```
 배열을 해체할 때는 배열 요소에 변수 이름을 마음대로 쓸 수 있으며 
 배열 순서대로 대응.
@@ -399,6 +399,8 @@ ES6 에서 새로 도입한 해체 할당
     y;              // 2
     rest;           // [3,4,5]
 ```
+
+<a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment" target="_blank" >mdn 비구조할당 참조</a>
 
 ### 객체와 배열 연산자
 <table>
