@@ -799,3 +799,95 @@ Object.keys를 사용하면 별도의 조건 필요없이 프로퍼티를 나열
     }); // [2, 4, 6, 8, 10]
     
 ```
+<<<<<<< HEAD
+=======
+처음에 배열(arr)을 넣어서(입력), 결과(map)를 얻었습니다(출력). arr도 사용은 됐지만, 값은 변하지 않았고, map이라는 결과를 내고 아무런 부작용도 낳지 않았습니다. 바로 이런 게 함수형 프로그래밍에 적합한 함수, 순수함수입니다. 물론 이것은 배열의 메소드지만, 충분히 map이라는 함수를 따로 만들 수 있습니다.
+
+### 함수형 반복문
+함수형은 반복문을 사용하지 않습니다.
+```
+    var sum = 0;
+    for (var i = 1; i <= 10; i++) {
+        sum += i;
+    }
+    console.log(sum)
+
+    function add(sum, count) {
+        sum += count;
+        if (count > 0) {
+            return add(sum, count - 1);
+        } else {
+            return sum;
+        }
+    }
+    console.log(add(0, 10));
+
+```
+add 안에서 add를 또 호출합니다.. 복잡해보이지만 한 번 실행 결과를 생각해봅니다. 이렇게 함수형으로 표현하면 장점이, 코드의 재사용성이 매우 높아진다는 겁니다. 한 번 함수로 만들어놓으면 언제든지 add 함수를 다시 쓸 수 있습니다.
+
+### 함수형 메서드체이닝, 함수 체이닝
+es6에는 함수형에 좋은 여러가지 api가 있습니다. 로대시, RxJS, 람다JS 간단한 예제를 보며 체이닝이 어떤 형태인지 확인하겠습니다.
+
+#### 메서드 체이닝
+메서드 체이닝은 여러 메서드를 단일 구문으로 호출하는 OOP 패턴입니다. 메서드가 모두 동일한 객체에 속해 있으면 메서드 흘리기라고도 합니다.
+```
+ console.log('Functional Programming'.substring(0, 10).toLowerCase() + 'is fun')
+```
+위 예제는 객체지향 프로그램에서 불편 객체에 많이 적용하는 패턴이지만 함수형 프로그래밍에도 잘 맞습니다.
+위 예제는 원본과 무관한 문자열을 생성합니다. 그러므로 함수형에 잘 맞습니다.
+정확한 함수형으로 리팩터링한 코드는 다음과 같습니다.
+```
+ concat(toLowerCase(substring('Functional Programming', 1, 10)), ' is fun')
+```
+매게변수는 무도 함수 선언부에 명시해서 부수효과를 없애고 원본 객체를 바꾸지않습니다.
+가독성은 떨어지지만 위험요소는 없습니다.
+
+#### 함수 체이닝
+객체지향 프로그램은 주로 상속을 통해 코드를 재사용합니다. 함수는 함수를 제사용하며 함수 참조를 체이닝합니다.
+```
+    const number = 1;
+    function boxFn1 (number) {
+        return number + "function Chaining";
+    }
+
+    function boxFn2 (number) {
+        return number++;
+    }
+    console.log(boxFn1(boxFn2(number)));
+```
+
+
+#### 함수형 라이브러리
+* 로대시(lodash.js)<br>
+과거 함수형 자바스크립트 프로그래머들이 널리 사용해왔고 백본JS 같은 주요 자바스크립트 프레임워크의 디펜던시인 언더스코어JS에서 갈라져 나온 유틸리티 라이브러리입니다. 모듈화 함수 체인을 구성할때 좋습니다.
+```
+_.defaults({ 'a': 1 }, { 'a': 3, 'b': 2 });
+// → { 'a': 1, 'b': 2 }
+_.partition([1, 2, 3, 4], n => n % 2);
+// → [[1, 3], [2, 4]]
+```
+* 람다JS<br>
+함수형 프로그래밍 전용 유틸리티 라이브러리로, 함수 파이프라인을 생성할 때 쓰기 편합니다.
+```
+import * as R from 'ramda'
+
+const {identity} = R
+R.map(identity, [1, 2, 3])
+```
+
+* RxJS<br>
+RzJS는 리액티브 프로그래밍 패러다임을 구현한 라이브러리입니다. 옵저버/이터레이터 패턴과 함수형 프로그래밍에 비동기,이벤트 기반의 프로그램을 작성할때 유용합니다.
+```
+Rx.Observable.fromEvent(searchInputField, 'keyup') 
+  .map(function (e) {return e.target.value;}) 
+  .debounce(300) 
+  .distinctUntilChanged() 
+  .scan(function(prev, current) { 
+        if (prev == null && current == originalValue) {
+            return null; 
+        } 
+        return current; 
+  }, null) 
+  .filter(function(text) {return text != null}) 
+```
+>>>>>>> Jeonjeongho-patch-1
