@@ -799,8 +799,6 @@ Object.keys를 사용하면 별도의 조건 필요없이 프로퍼티를 나열
     }); // [2, 4, 6, 8, 10]
     
 ```
-<<<<<<< HEAD
-=======
 처음에 배열(arr)을 넣어서(입력), 결과(map)를 얻었습니다(출력). arr도 사용은 됐지만, 값은 변하지 않았고, map이라는 결과를 내고 아무런 부작용도 낳지 않았습니다. 바로 이런 게 함수형 프로그래밍에 적합한 함수, 순수함수입니다. 물론 이것은 배열의 메소드지만, 충분히 map이라는 함수를 따로 만들 수 있습니다.
 
 ### 함수형 반복문
@@ -890,4 +888,3 @@ Rx.Observable.fromEvent(searchInputField, 'keyup') 
   }, null) 
   .filter(function(text) {return text != null}) 
 ```
->>>>>>> Jeonjeongho-patch-1
