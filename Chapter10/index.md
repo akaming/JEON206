@@ -148,7 +148,7 @@ WeakMap의 이런 특징은 객체 인스턴스의 전용(private)키를 저장�
         }
     })();
 ```
-앞의 예제에서는 WeakMap과 그 위크맵을 사용하는 클래스를 함께 IIFE에 넣었다. IIFE 외부에서는 그 인스턴스에 비밀스런 내용을 저장할 수 있는  SecretHolder 클래스를 얻게 된다. 비밀을 저장할 때는 setSecret 메서드를 써야만 하고, 보려 할 때는 getSecret 메서드를 써야만 한다.
+앞의 예제에서는 WeakMap과 그 위크맵을 사용하는 클래스를 함께 [IIFE](https://goo.gl/V7USWa)(즉시 실행 함수 표현)에 넣었다. IIFE 외부에서는 그 인스턴스에 비밀스런 내용을 저장할 수 있는  SecretHolder 클래스를 얻게 된다. 비밀을 저장할 때는 setSecret 메서드를 써야만 하고, 보려 할 때는 getSecret 메서드를 써야만 한다.
 ```
     const a = new SecretHolder();
     const b = new SecretHolder();
@@ -269,4 +269,30 @@ WeakSet객체의 사용 사례는 제한되어 있다. 메모리 누수가 발�
     ws.has(window);    // false, window가 제거되었음
 
 ```
+## 요약
 
+map 간단한 키와 값을 서로 연결 시켜 저장하며 저장된 순서대로 각 요소드를 반복적으로 접근할수 있는 객체
+
+set(); 사용자 역할(값)을 할당
+
+get(); 역할(값)을 확인
+
+has(); 맵에 키가 존재하는지 확인
+
+set(); 값을 교체
+
+.size; 맵의 요소 숫자 확인
+
+keys() 맵의 키를 확인
+
+values() 맵의 값을 확인
+
+entries() 첫 번쨰 요소가 키 이고 두 번째 요소가 값인 배열을 각각 반환
+
+delete(); 맵의 요소를 삭제
+
+clear(); 맵의 요소를 모두 삭제
+
+set 값들의 집합이며 입력된 순서에 따라 저장된 요소를 반복처리 하고 특정 값은 Set내에서 하나만 존재 하는것
+
+add(); 역할을 추가할때 사용
