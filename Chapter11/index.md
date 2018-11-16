@@ -7,32 +7,32 @@
 ## 11.1 Error 객체
 자바스크립트 내장된 Error 객체
 ```
-    const err = new Error('invalid email');
+const err = new Error('invalid email');
 ```
 
 Error 인스턴스를 만드는 것만으로 아무 일도 일어나지 않는다.
 이 인스턴스는 에러와 통신 수단이다.
 
 ```
-    function validateEmail(email){
-        return email.match(/@/) ? //정규식 email에 '@' 있는지 체크
-            email : 
-            new Error('invalid email:${email}');
-    }
+function validateEmail(email){
+    return email.match(/@/) ? //정규식 email에 '@' 있는지 체크
+        email : 
+        new Error('invalid email : ${email}');
+}
 ```
 
 이 함수를 사용할때는 instanceof 연산자를 써서 Error 인스턴스가 반환됐는지 확인.
 에러메세지는 message 프로퍼티에 있습니다.
 
 ```
-    const email = 'jane@doe.com';
+const email = 'jane@doe.com';
 
-    const validatedEmail = validateEmail(email);
-    if( validatedEmail instanceof Error ){
-        console.error('Error : ${validatedEmail.message}');
-    }else{
-        console.log('valid email:${validatedEmail}')
-    }
+const validatedEmail = validateEmail(email);
+if( validatedEmail instanceof Error ){
+    console.error('Error : ${validatedEmail.message}');
+}else{
+    console.log('valid email : ${validatedEmail}')
+}
 ```
 이방법도 Error 인스턴스를 활용하는 유효하고 유용한 방법이긴 하지만,
 <strong>Error 인스턴스는 예외처리</strong>에서 더 자주 사용됩니다.
@@ -43,22 +43,22 @@ Error 인스턴스를 만드는 것만으로 아무 일도 일어나지 않는�
 예상치 못한 에러에 대처하려면 try...catch 문으로 전체 를 감쌀 수있습니다.
 
 ```
-    const email = null; //email에 아무것도 입력안하거나 특수문자 입력했을때 위의 코드로하면 에러 나올수있으므로.
+const email = null; //email에 아무것도 입력안하거나 특수문자 입력했을때 위의 코드로하면 에러 나올수있으므로.
 
-    try {
-        //오류가 발생할 수 있는 문
-        const validatedEmail = validateEmail(email);
+try {
+    //오류가 발생할 수 있는 문
+    const validatedEmail = validateEmail(email);
 
-        if(validatedEmail instanceof Error){
-            console.error('Error : ${validateEmail.message}')
-        }else{
-            console.log('Valid email : ${validdatedEmail}');
-        }
-    }catch(err){
-        //선택적요소
-        // try문의 오류를 처리하는 문
-        console.error('Error : ${err.message}');
+    if(validatedEmail instanceof Error){
+        console.error('Error : ${validatedEmail.message}')
+    }else{
+        console.log('Valid email : ${validatedEmail}');
     }
+}catch(err){
+    //선택적요소
+    // try문의 오류를 처리하는 문
+    console.error('Error : ${err.message}');
+}
 ```
 try 블록에는 오류를 가져올수 있는 코드를 포함.
 catch 블록에는 일부 또는 모든 오류를 처리하는 코드 포함.
@@ -73,55 +73,55 @@ try 블록에서 오류가 발생하면 catch 블록으로 넘깁니다다. err 
 자바스크립트는 에러를 일으킬 때 객체,숫자,문자열 어떤값이든 catch 절에 넘길 수 있다.
 하지만 Error 인스턴스를 넘기는 것이 가장 편함.
 ```
-    function billPay(amount, payee, account){
-        if(amount > account.balance)
-            throw new Error('insufficient funds');
-        account.transfer(payee,amount);
-    }
+function billPay(amount, payee, account){ // 찾는금액, 잔고
+    if(amount > account.balance)
+        throw new Error('insufficient funds');
+    account.transfer(payee,amount);
+}
 ```
-
 throw를 호출하면서 현재 함수는 즉시 실행을 멈춘다.
 account.transfer가 호출되지 않음.
 
 ## 11.4 예외 처리와 호출 스택
 완료되지 않은 함수가 쌓이는 것을 호출스택(call stack) 이라고 한다.
+Error 인스턴스에는 스펙을 문자열로 표현한 stack 프로퍼티가 있습니다.
 
 ```
-    function a(){
-        console.log('a : calling b');
-        b();
-        console.log('a : done');
-    }
+function a(){
+    console.log('a : calling b');
+    b();
+    console.log('a : done');
+}
 
-    function b(){
-        console.log('b : calling c');
-        c();
-        console.log('b : done');
-    }
+function b(){
+    console.log('b : calling c');
+    c();
+    console.log('b : done');
+}
 
-    function c(){
-        console.log('c : throwing error');
-        throw new Error('c error');
-        console.log('c :done');
-    }
+function c(){
+    console.log('c : throwing error');
+    throw new Error('c error');
+    console.log('c :done');
+}
 
-    function d(){
-        console.log('d : calling c');
-        c();
-        console.log('d : done');
-    }
+function d(){
+    console.log('d : calling c');
+    c();
+    console.log('d : done');
+}
 
-    try {
-        a();
-    } catch(err){
-        console.log(err.stack);
-    }
+try {
+    a();
+} catch(err){
+    console.log(err.stack);
+}
 
-    try {
-        d();
-    } catch(err) {
-        console.log(err.stack);
-    }
+try {
+    d();
+} catch(err) {
+    console.log(err.stack);
+}
 
 ```
 console 에서 @ 가 있는 행은 스택추정이며 ' 가장 깊은 함수 (c)'에서 시작하고 함수가 남지 않았을때 끝납니다.
@@ -132,16 +132,16 @@ console 에서 @ 가 있는 행은 스택추정이며 ' 가장 깊은 함수 (c)
 finally 블록은 에러가 일어나든, 일어나지 않든 반드시 호출된다.
 
 ```
-    try {
-        console.log('this line is exeuted...');
-        throw new Error('whoops');
-        console.log('this line is not...');
-    } catch(err){
-        console.log('there was an error...');
-    } finally{
-        console.log('...always executed');
-        console.log('perform cleanup here');
-    }
+try {
+    console.log('this line is exeuted...');
+    throw new Error('whoops');
+    console.log('this line is not...');
+} catch(err){
+    console.log('there was an error...');
+} finally{
+    console.log('...always executed');
+    console.log('perform cleanup here');
+}
 
 ```
 
