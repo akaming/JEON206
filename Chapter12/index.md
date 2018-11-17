@@ -1,22 +1,23 @@
 # CHAPTER 12 이터레이터와 제너레이터
 - ES6에서 새로 도입
 - 제너레이터 : 이터레이터에 의존하는 개념입니다.
-- 이터레이터 : '지금 어디 있는지' 파악할 수 있도록 돕는다는 면에서 일종의 **책갈피**와 비슷한 개념입니다. 배열은 이터러블 객체의 좋은 예입니다.
+- 이터레이터 : '지금 어디 있는지' 파악할 수 있도록 돕는다는 면에서 일종의 **책갈피**와 비슷한 개념입니다. 
 
 ## 이터레이터
+- 배열은 이터러블 객체의 좋은 예입니다. book이란 배열이 있고, 이 배열의 각 요소는 책의 한 페이지를 나타내는 문자열이라고 합시다. 
+```
+    const book = [
+        "Twinkle, twinkle, little bat!",
+        "How I wonder what you're at!",
+        "Up above the world you fly,",
+        "Linke a tea tray in the sky.",
+        "Twinkle, twinkle, little bat!",
+        "How I wonder what you're at!",
+    ];
+```
 - **values() 메서드** : 이터레이터 생성
     - book이라는 배열에 values 메서드를 사용하여 이터레이터로 만들었습니다.
     ```
-        const book = [
-            "Twinkle, twinkle, little bat!",
-            "How I wonder what you're at!",
-            "Up above the world you fly,",
-            "Linke a tea tray in the sky.",
-            "Twinkle, twinkle, little bat!",
-            "How I wonder what you're at!",
-        ];
-
-        // book이라는 배열에 values메서드를 사용하여 이터레이터로 만듭니다.
         const it = book.values();
     ```
 - **next() 메서드** : 이터레이터 실행
