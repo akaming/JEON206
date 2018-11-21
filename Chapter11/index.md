@@ -17,7 +17,7 @@ Error 인스턴스를 만드는 것만으로 아무 일도 일어나지 않는�
 function validateEmail(email){
     return email.match(/@/) ? //정규식 email에 '@' 있는지 체크
         email : 
-        new Error('invalid email : ${email}');
+        new Error(`invalid email : ${email}`);
 }
 ```
 
@@ -29,9 +29,9 @@ const email = 'jane@doe.com';
 
 const validatedEmail = validateEmail(email);
 if( validatedEmail instanceof Error ){
-    console.error('Error : ${validatedEmail.message}');
+    console.error(`Error : ${validatedEmail.message}`);
 }else{
-    console.log('valid email : ${validatedEmail}')
+    console.log(`valid email : ${validatedEmail}`)
 }
 ```
 이방법도 Error 인스턴스를 활용하는 유효하고 유용한 방법이긴 하지만,
@@ -50,14 +50,14 @@ try {
     const validatedEmail = validateEmail(email);
 
     if(validatedEmail instanceof Error){
-        console.error('Error : ${validatedEmail.message}')
+        console.error(`Error : ${validatedEmail.message}`)
     }else{
-        console.log('Valid email : ${validatedEmail}');
+        console.log(`Valid email : ${validatedEmail}`);
     }
 }catch(err){
     //선택적요소
     // try문의 오류를 처리하는 문
-    console.error('Error : ${err.message}');
+    console.error(`Error : ${err.message}`);
 }
 ```
 try 블록에는 오류를 가져올수 있는 코드를 포함.
