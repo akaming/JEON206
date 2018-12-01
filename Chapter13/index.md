@@ -32,13 +32,7 @@ function isCurrentYearLeapYear() {
     else return true;
 }
 ```
-새로 만든 함수의 반환값을 활용
-```
-const daysInMonth =
-    [31, isCurrentYearLeapYear() ? 29 : 28, 31, 30, 31, 30,
-        31, 31, 30, 31, 30, 31];
-if(isCurrentYearLeapYear()) console.log('It is a leap year.');
-```
+
 
 
 ## 13.3 함수로서의 함수
@@ -80,6 +74,8 @@ typeof v 를 사용하면 v가 함수인 경우 "function"이 반환됨
 IIFE : 즉시 실행 함수 표현(Immediately Invoked Function Expression)은 정의되자마자 즉시 실행되는 Javascript Function 를 말한다.
 
 <예제>
+
+ 표현 내부의 변수는 외부로부터의 접근이 불가능하다.
 ```
     (function(){
         var aName = "Baryy";
@@ -89,7 +85,6 @@ IIFE : 즉시 실행 함수 표현(Immediately Invoked Function Expression)은 �
 ```
 IIFE를 변수에 할당하면 IIFE 자체는 저장되지 않고, 함수가 실행된 결과만 저장된다.
 ```
-    // 
     var result = (function(){
         var name = "Baryy";
         return name;
@@ -145,7 +140,7 @@ IIFE를 변수에 할당하면 IIFE 자체는 저장되지 않고, 함수가 실
 ```
 왜 done 이 먼저 출력되고 출력되지 말아야할 10만 열 번 출력되는 걸까? 그 이유는 JavaScript가 비동기적으로 동작하기 때문이다.
 JavaScript는 특정 명력이 실행된 후 그 명령이 끝나기 전에 다음 명령이 실행될 수 있다. 앞선 첫 코드에서는 명령이 동작하는데 걸리는 시간이 모두 동일하기에 예상한대로 순서대로 출력되었지만, 둘째 코드에서는 for문 내에서 출력하는 부분에 시간지연이 생겨 결국 done이 먼저 출력된 것이다. done 이 출력되기전에 이미 for loop를 모두 반복하였으므로 i는 이미 10이 된 상태였고 그것을 열 번 출력했기 때문에 방금같은 결과가 나온 것이다.
-JavaScript 코딩 시에는 서버쪽에서 request를 날릴 일이 많은데 reponse를 받는 속도는 명령 실행속도보다는 훨씬 느리기 때문에 이걸 원래 짜왔던 대로 절차지향적(물이 위에서 아래로 흐르는 것처럼 순차적인 처리가 중요시 되며 프로그램 전체가 유기적으로 연결되도록 만드는 프로그래밍 기법)으로 짜게 되면 문제가 생긴다. 따라서 JavaScript가 동기적으로 동작하기 원한다면 [callback](https://goo.gl/9oJcGt)을 잘 이용해야 한다.
+JavaScript 코딩 시에는 서버쪽에서 request를 날릴 일이 많은데 response를 받는 속도는 명령 실행속도보다는 훨씬 느리기 때문에 이걸 원래 짜왔던 대로 절차지향적(물이 위에서 아래로 흐르는 것처럼 순차적인 처리가 중요시 되며 프로그램 전체가 유기적으로 연결되도록 만드는 프로그래밍 기법)으로 짜게 되면 문제가 생긴다. 따라서 JavaScript가 동기적으로 동작하기 원한다면 [callback](https://goo.gl/9oJcGt)을 잘 이용해야 한다.
 
 
 ## 13.6 변수로서의 함수
@@ -204,6 +199,7 @@ for (let i=0; i<pipeline.length; i++) {
     p2 = pipeline[i](p2);
 }
 ```
+<예제>
 ```
     //es6
     let arr = [1, () => 2]
@@ -211,6 +207,8 @@ for (let i=0; i<pipeline.length; i++) {
 
 ## 13.6.2함수에 함수 전달
 함수에 함수를 전달하는 함수 : 콜백(callback)
+
+<예제>
 ```
 1   function test(f){
 2       f()
@@ -227,6 +225,7 @@ test라는 함수는 인자로 함수를 받는다.
 2행에서 f()를 호출하고 있다.
 호출한 결과는 당연히 전달한 함수 내의 코드가 실행될 것이다.
 
+<예제>
 ```
     //es6
     const fun(n, f) => n + f();
