@@ -99,9 +99,9 @@ Math.SQRT2   // 2의 제곱근 : ~1.414
 | Math.pow(x,y) | x 의 y 제곱 | Math.pow(2, 3)      // 8  <br>Math.pow(1.7, 2.3)  // ~3.39 |
 | Math.sqrt(x) | 주어진 숫자에 루트(√ ) | Math.sqrt(16)    // 4 <br>Math.sqrt(15.5)  // ~3.94 |
 | Math.cbrt(x) | 세제곱근. x는 Math.pow(x, 1/3)와 같습니다. | Math.cbrt(27)   // 3 <br>Math.cbrt(22)   // ~2.8 |
-| Math.exp(x) | e의 x제곱. Math.pow(Math.E, x)와 같습니다. | Math.exp(1)     // ~2.718  Math.exp(5.5)   // ~244.7 |
-| Math.expm1(x) | e의 x제곱 - 1.  Math.exp(x) - 1와 같습니다. | Math.expm1(1)     // ~1.718  Math.expm1(5.5)   // ~243.7 |
-| Math.hypot (x1, x2,...) | 매개변수의 제곱을 합한 수. 루트(√ )( x1의제곱 + x2의 제곱 + ... )의 제곱근입니다. | Math.hypot(3, 4)    // 5  Math.hypot(2, 3, 4) // ~5.36 |
+| Math.exp(x) | e의 x제곱. Math.pow(Math.E, x)와 같습니다. | Math.exp(1)     // ~2.718  <br>Math.exp(5.5)   // ~244.7 |
+| Math.expm1(x) | e의 x제곱 - 1.  Math.exp(x) - 1와 같습니다. | Math.expm1(1)     // ~1.718  <br>Math.expm1(5.5)   // ~243.7 |
+| Math.hypot (x1, x2,...) | 매개변수의 제곱을 합한 수. 루트(√ )( x1의제곱 + x2의 제곱 + ... )의 제곱근입니다. | Math.hypot(3, 4)    // 5  <br>Math.hypot(2, 3, 4) // ~5.36 |
 
 
 #### 16.3.2 로그함수 
@@ -111,9 +111,9 @@ es6에서 자주 쓰이는 사용로그 Math.log10 함수가 생겼습니다.
 | 함수 | 설명 | 예제 |
 | --- | ------ | --- |
 | Math.pow(x,y) | x의 자연로그 | Math.log(Math.E) // 1  Math.log(17.5)   // ~2.86 |
-| Math.log10(x) | x의 상용로그. Math.log(x)/Math.log(10)와 같습니다. | Math.log10(10)   // 1  Math.log10(16.7) // ~1.22 |
-| Math.log2(x) | x의 밑수가 2인 로그. Math.log(x)/Math.log(2)와 같습니다. | Math.log2(2)   // 1  Math.log2(5)   // ~2.32 |
-| Math.log1p(x) | 1 + x의 자연로그. Math.log(1 + x)와 같습니다. | Math.log1p(Math.E - 1) // 1  Math.log1p(17.5)    // ~2.92 |
+| Math.log10(x) | x의 상용로그. Math.log(x)/Math.log(10)와 같습니다. | Math.log10(10)   // 1  <br>Math.log10(16.7) // ~1.22 |
+| Math.log2(x) | x의 밑수가 2인 로그. Math.log(x)/Math.log(2)와 같습니다. | Math.log2(2)   // 1  <br>Math.log2(5)   // ~2.32 |
+| Math.log1p(x) | 1 + x의 자연로그. Math.log(1 + x)와 같습니다. | Math.log1p(Math.E - 1) // 1  <br>Math.log1p(17.5)    // ~2.92 |
 
 #### 16.3.2 로그함수 
 절댓값, 부호, 배열 의 최솟값/ 최댓값 등 숫자 관련 함수
@@ -121,13 +121,13 @@ es6에서 자주 쓰이는 사용로그 Math.log10 함수가 생겼습니다.
 | 함수 | 설명 | 예제 |
 | --- | ------ | --- |
 | Math.abs(x) | x의 절댓값 | Math.abs(-5.5) // 5.5  Math.abs(5.5)  // 5.5 |
-| Math.sign(x) | x의 부호. x가 음수면 -1, 양수면 1, 0이면 0입니다. | Math.sign(-10.5) // -1  Math.sign(6.77)  // 1 |
-| Math.ceil(x) | x의 올림. x보다 크거나 같은 정수 중 가장 작은 수 | Math.ceil(2.2)  // 3  Math.ceil(-3.8) // -3 |
-| Math.floor(x) | x의 내림. x보다 작거나 같은 정수 중 가장 큰 수 | Math.floor(2.8)  // 2  Math.floor(-3.2) // -4 |
-| Math.trunc(x) | x의 버림. 소수점 아래 부분을 모두 제거하고 정수 부분만 남긴 수입니다. | Math.trunc(7.7)  // 7  Math.trunc(-5.8) // -5 |
-| Math.round(x) | x의 반올림 | Math.round(7.2) // 7  Math.round(7.7) // 8  Math.round(-7.7) // -8  Math.round(-7.2) // -7 |
-| Math.min(x1, x2,...) | 매개변수 중 최솟값 | Math.min(1, 2)  // 1  Math.min(3, 0.5, 0.66)  // 0.5  Math.min(3, 0.5, -0.66) // -0.66 |
-| Math.max(x1, x2,...) | 매개변수 중 최댓값 | Math.max(1, 2)  // 2   Math.max(3, 0.5, 0.66)   // 3  Math.max(-3, 0.5, -0.66) // 0.5 |
+| Math.sign(x) | x의 부호. <br>x가 음수면 -1, 양수면 1, 0이면 0입니다. | Math.sign(-10.5) // -1  <br>Math.sign(6.77)  // 1 |
+| Math.ceil(x) | x의 올림. <br>x보다 크거나 같은 정수 중 가장 작은 수 | Math.ceil(2.2)  // 3  <br>Math.ceil(-3.8) // -3 |
+| Math.floor(x) | x의 내림. <br>x보다 작거나 같은 정수 중 가장 큰 수 | Math.floor(2.8)  // 2  <br>Math.floor(-3.2) // -4 |
+| Math.trunc(x) | x의 버림. <br>소수점 아래 부분을 모두 제거하고 정수 부분만 남긴 수입니다. | Math.trunc(7.7)  // 7  <br>Math.trunc(-5.8) // -5 |
+| Math.round(x) | x의 반올림 | Math.round(7.2) // 7  Math.round(7.7) // 8  <br>Math.round(-7.7) // -8  <br>Math.round(-7.2) // -7 |
+| Math.min(x1, x2,...) | 매개변수 중 최솟값 | Math.min(1, 2)  // 1  <br>Math.min(3, 0.5, 0.66)  // 0.5  <br>Math.min(3, 0.5, -0.66) // -0.66 |
+| Math.max(x1, x2,...) | 매개변수 중 최댓값 | Math.max(1, 2)  // 2   <br>Math.max(3, 0.5, 0.66)   // 3  <br>Math.max(-3, 0.5, -0.66) // 0.5 |
 
 #### 16.3.2 의사 난수 생성
 자바스크립트에서 난수(정의된 범위 내에서 무작위로 추출된 수)를 생성할때 Math.random()을 사용합니다. 0 이상 1 미만의 숫자를 반환합니다.
@@ -149,16 +149,16 @@ es6에서 자주 쓰이는 사용로그 Math.log10 함수가 생겼습니다.
 
 | 함수 | 설명 | 예제 |
 | --- | ------ | --- |
-| Math.sin(x) | x의 사인 | Math.sin(Math.PI/2) // 1  Math.sin(Math.PI/4) // ~0.707 |
-| Math.cos(x) | x의 코사인 | Math.cos(Math.PI)   // -1  Math.cos(Math.PI/4) // ~0.707 |
-| Math.tan(x) | x의 탄젠트 | Math.tan(Math.PI/4) // ~1  Math.tan(0)         // 0 |
-| Math.asin(x) | x의 아크사인(결과는 라디안입니다 | Math.asin(0)             // 0  Math.asin(Math.SQRT1_2)  // ~0.785 |
-| Math.acos(x) | x의 아크코사인(결과는 라디안입니다 | Math.acos(0)             // ~1.57+  Math.acos(Math.SQRT1_2)  // ~0.785+ |
-| Math.atan(x) | x의 아크탄젠트(결과는 라디안입니다 | Math.atan(0)            // 0  Math.atan(Math.SQRT1_2) // ~0.615 |
-| Math.atan2(y, x) | x 축에서 점 (x, y)까지의 시계 반대방향 각도를 라디안으로 나타낸 값 | Math.atan2(0, 1)  // 0  Math.atan2(1, 1)  // ~0.785 |
+| Math.sin(x) | x의 사인 | Math.sin(Math.PI/2) // 1  <br>Math.sin(Math.PI/4) // ~0.707 |
+| Math.cos(x) | x의 코사인 | Math.cos(Math.PI)   // -1  <br>Math.cos(Math.PI/4) // ~0.707 |
+| Math.tan(x) | x의 탄젠트 | Math.tan(Math.PI/4) // ~1  <br>Math.tan(0)         // 0 |
+| Math.asin(x) | x의 아크사인(결과는 라디안입니다) | Math.asin(0)             // 0  <br>Math.asin(Math.SQRT1_2)  // ~0.785 |
+| Math.acos(x) | x의 아크코사인(결과는 라디안입니다) | Math.acos(0)             // ~1.57+  <br>Math.acos(Math.SQRT1_2)  // ~0.785+ |
+| Math.atan(x) | x의 아크탄젠트(결과는 라디안입니다) | Math.atan(0)            // 0  <br>Math.atan(Math.SQRT1_2) // ~0.615 |
+| Math.atan2(y, x) | x 축에서 점 (x, y)까지의 시계 반대방향 각도를<br>라디안으로 나타낸 값 | Math.atan2(0, 1)  // 0  <br>Math.atan2(1, 1)  // ~0.785 |
 
-매개변수에 각도를 쓸 수 없으므로 라디안 값으로 바꿔야한다.
-180으로 나누고  파이(π)를 곱하면 됩니다.
+*매개변수에 각도를 쓸 수 없으므로 라디안 값으로 바꿔야한다.*
+*180으로 나누고  파이(π)를 곱하면 됩니다.*
 ```
 function deg2rad(d) { return d/180*Math.PI; }
 function read2deg(r) {return r/Math.PI*180; }
@@ -167,11 +167,11 @@ function read2deg(r) {return r/Math.PI*180; }
 ### 16.4 쌍곡선 함수
 | 함수 | 설명 | 예제 |
 | --- | ------ | --- |
-| Math.sinh(x) | 설명 | x의 퍼볼릭 사인 | Math.sinh(0) // 0  Math.sinh(1) // ~1.18 |
-| Math.cosh(x) | x의 하이퍼볼릭 코사인 | Math.cosh(0) // 1  Math.cosh(1) // ~1.54 |
-| Math.tanh(x) | x의 하이퍼볼릭 탄젠트 | Math.tanh(0) // 0  Math.tanh(1) // ~0.762 |
-| Math.asinh(x) | x의 하이퍼볼릭 아크 사인 | Math.asinh(0) // 0  Math.asinh(1) // ~0.881 |
-| Math.acosh(x) | x의 하이퍼볼릭 아크 코사인 | Math.acosh(0) // NaN  Math.acosh(1) // 0 |
-| Math.atanh(x) | x의 하이퍼볼릭 아크 탄젠트 | Math.atanh(0) // 0  Math.atanh(0) // ~0.615 |
+| Math.sinh(x) | 설명 | x의 퍼볼릭 사인 | Math.sinh(0) // 0  <br>Math.sinh(1) // ~1.18 |
+| Math.cosh(x) | x의 하이퍼볼릭 코사인 | Math.cosh(0) // 1  <br>Math.cosh(1) // ~1.54 |
+| Math.tanh(x) | x의 하이퍼볼릭 탄젠트 | Math.tanh(0) // 0  <br>Math.tanh(1) // ~0.762 |
+| Math.asinh(x) | x의 하이퍼볼릭 아크 사인 | Math.asinh(0) // 0  <br>Math.asinh(1) // ~0.881 |
+| Math.acosh(x) | x의 하이퍼볼릭 아크 코사인 | Math.acosh(0) // NaN  <br>Math.acosh(1) // 0 |
+| Math.atanh(x) | x의 하이퍼볼릭 아크 탄젠트 | Math.atanh(0) // 0  <br>Math.atanh(0) // ~0.615 |
 
 
