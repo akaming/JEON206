@@ -1,6 +1,6 @@
 # chapter16 Math
 
-Math 객체는 수학함수를 담고 있습니다. Math 객체의 프로퍼티를 매서드라 부르지않고 함수라 부른다.
+Math 객체는 수학함수를 담고 있다. Math 객체의 프로퍼티를 매서드라 부르지않고 함수라 부른다.
 
 * 자바스크립트에는 정수 전용 클래스가 없음.
 * 자바스크립트의 숫자는 모두 IEEE 754 64비트 부동소수점 숫자임
@@ -96,6 +96,11 @@ Math.SQRT2   // 2의 제곱근 : ~1.414
 
 #### 제곱．제곱근 관련함수
 <table>
+    <colgroup>
+        <col style="width:20%"/>
+        <col style="width:20%"/>
+        <col style="width:20%"/>
+    </colgroup>
     <thead>
         <tr>
             <th>함수</th>
@@ -153,7 +158,7 @@ Math.SQRT2   // 2의 제곱근 : ~1.414
             </td>
         <tr>
     </tbody>
-<table>
+</table>
 
 #### 16.3.2 로그함수 
 자바스크립트의 log는 자연로그이다. 자연로그의 함수는 Math.log 이다.
@@ -201,7 +206,7 @@ es6에서 자주 쓰이는 사용로그 Math.log10 함수가 생겼습니다.
             </td>
         <tr>
     </tbody>
-<table>
+</table>
 
 #### 16.3.2 로그함수 
 절댓값, 부호, 배열 의 최솟값/ 최댓값 등 숫자 관련 함수
@@ -284,7 +289,7 @@ es6에서 자주 쓰이는 사용로그 Math.log10 함수가 생겼습니다.
             </td>
         <tr>
     </tbody>
-<table>
+</table>
 
 #### 16.3.2 의사 난수 생성
 자바스크립트에서 난수(정의된 범위 내에서 무작위로 추출된 수)를 생성할때 Math.random()을 사용합니다. 0 이상 1 미만의 숫자를 반환합니다.
@@ -303,7 +308,7 @@ es6에서 자주 쓰이는 사용로그 Math.log10 함수가 생겼습니다.
             <td>Math.random()</td>
         <tr>
         <tr>
-            <td>x 이상 y 미만</td>
+            <td>x 이상 y 미만</td>.
             <td>x + (y-x)*Math.random()</td>
         <tr>
         <tr>
@@ -315,7 +320,7 @@ es6에서 자주 쓰이는 사용로그 Math.log10 함수가 생겼습니다.
             <td>m + Math.floor((n-m+1)*Math.random())</td>
         <tr>
     </tbody>
-<table>
+</table>
 
 자바스크립트는 의사 난수를 발생기는 시드 숫자를 쓸 수 없다는 단점이 지적되곤 합니다.
 의사 난수를 사용하는 알고리즘 중에는 시드 숫자가 중요할 때가 많습니다. 시드를 사용해 의자 난수를 생성해야 한다면 데이비드 바우의 <a href="https://github.com/davidbau/seedrandom" target="_blank">seedrandom.js</a> 패키지를 보십시오
@@ -391,7 +396,7 @@ es6에서 자주 쓰이는 사용로그 Math.log10 함수가 생겼습니다.
             </td>
         <tr>
     </tbody>
-<table>
+</table>
 
 매개변수에 각도를 쓸 수 없으므로 라디안 값으로 바꿔야한다.
 180으로 나누고  파이(π)를 곱하면 됩니다.
@@ -459,4 +464,4 @@ function read2deg(r) {return r/Math.PI*180; }
             </td>
         <tr>
     </tbody>
-<table>
+</table>
