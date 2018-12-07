@@ -91,13 +91,11 @@ Math.SQRT2   // 2의 제곱근 : ~1.414
 ```
 ### 16.3 대수 함수
 #### 16.3.1 거듭제곱
-
 제곱 관련 기본 함수는 Math.pow 이며 제곱근, 세제곱근, e의 거듭제곱 등 자주 쓰이는 연산에는 간편 함수가 있습니다.
 
 #### 제곱．제곱근 관련함수
-
 | 함수 | 설명 | 예제 |
-| --- | --- | --- |
+| --- | ------ | --- |
 | Math.pow(x,y) | x 의 y 제곱 | Math.pow(2, 3)      // 8  <br>Math.pow(1.7, 2.3)  // ~3.39 |
 | Math.sqrt(x) | 주어진 숫자에 루트(√ ) | Math.sqrt(16)    // 4 <br>Math.sqrt(15.5)  // ~3.94 |
 | Math.cbrt(x) | 세제곱근. x는 Math.pow(x, 1/3)와 같습니다. | Math.cbrt(27)   // 3 <br>Math.cbrt(22)   // ~2.8 |
@@ -110,259 +108,54 @@ Math.SQRT2   // 2의 제곱근 : ~1.414
 자바스크립트의 log는 자연로그이다. 자연로그의 함수는 Math.log 이다.
 es6에서 자주 쓰이는 사용로그 Math.log10 함수가 생겼습니다.
 
-<table>
-    <colgroup>
-        <col style="width:20%">
-        <col style="width:50%">
-        <col style="width:%">
-    </colgroup>
-    <thead>
-        <tr>
-            <th>함수</th>
-            <th>설명</th>
-            <th>예제</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>Math.log(x)</td>
-            <td>x의 자연로그</td>
-            <td>
-                Math.log(Math.E) // 1 <br>
-                Math.log(17.5)   // ~2.86
-            </td>
-        </tr>
-        <tr>
-            <td>Math.log10(x)</td>
-            <td>x의 상용로그. Math.log(x)/Math.log(10)와 같습니다.</td>
-            <td>
-                Math.log10(10)   // 1 <br>
-                Math.log10(16.7) // ~1.22
-            </td>
-        </tr>
-        <tr>
-            <td>Math.log2(x)</td>
-            <td>x의 밑수가 2인 로그. Math.log(x)/Math.log(2)와 같습니다.</td>
-            <td>
-                Math.log2(2)   // 1  <br>
-                Math.log2(5)   // ~2.32
-            </td>
-        </tr>
-        <tr>
-            <td>Math.log1p(x)</td>
-            <td>1 + x의 자연로그. Math.log(1 + x)와 같습니다.</td>
-            <td>
-                Math.log1p(Math.E - 1) // 1 <br>
-                Math.log1p(17.5)    // ~2.92
-            </td>
-        </tr>
-    </tbody>
-</table>
+| 함수 | 설명 | 예제 |
+| --- | ------ | --- |
+| Math.pow(x,y) | x의 자연로그 | Math.log(Math.E) // 1  Math.log(17.5)   // ~2.86 |
+| Math.log10(x) | x의 상용로그. Math.log(x)/Math.log(10)와 같습니다. | Math.log10(10)   // 1  Math.log10(16.7) // ~1.22 |
+| Math.log2(x) | x의 밑수가 2인 로그. Math.log(x)/Math.log(2)와 같습니다. | Math.log2(2)   // 1  Math.log2(5)   // ~2.32 |
+| Math.log1p(x) | 1 + x의 자연로그. Math.log(1 + x)와 같습니다. | Math.log1p(Math.E - 1) // 1  Math.log1p(17.5)    // ~2.92 |
 
 #### 16.3.2 로그함수 
 절댓값, 부호, 배열 의 최솟값/ 최댓값 등 숫자 관련 함수
 
-<table>
-    <colgroup>
-        <col style="width:20%">
-        <col style="width:50%">
-        <col style="width:%">
-    </colgroup>
-    <thead>
-        <tr>
-            <th>함수</th>
-            <th>설명</th>
-            <th>예제</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>Math.abs(x)</td>
-            <td>x의 절댓값</td>
-            <td>
-                Math.abs(-5.5) // 5.5  <br>
-                Math.abs(5.5)  // 5.5
-            </td>
-        </tr>
-        <tr>
-            <td>Math.sign(x)</td>
-            <td>x의 부호. x가 음수면 -1, 양수면 1, 0이면 0입니다.</td>
-            <td>
-                Math.sign(-10.5) // -1  <br>
-                Math.sign(6.77)  // 1
-            </td>
-        </tr>
-        <tr>
-            <td>Math.ceil(x)</td>
-            <td>x의 올림. x보다 크거나 같은 정수 중 가장 작은 수</td>
-            <td>
-                Math.ceil(2.2)  // 3   <br>
-                Math.ceil(-3.8) // -3
-            </td>
-        </tr>
-        <tr>
-            <td>Math.floor(x)</td>
-            <td>x의 내림. x보다 작거나 같은 정수 중 가장 큰 수</td>
-            <td>
-                Math.floor(2.8)  // 2 <br>
-                Math.floor(-3.2) // -4
-            </td>
-        </tr>
-        <tr>
-            <td>Math.trunc(x)</td>
-            <td>x의 버림. 소수점 아래 부분을 모두 제거하고 정수 부분만 남긴 수입니다.</td>
-            <td>
-                Math.trunc(7.7)  // 7 <br>
-                Math.trunc(-5.8) // -5
-            </td>
-        </tr>
-        <tr>
-            <td>Math.round(x)</td>
-            <td>x의 반올림</td>
-            <td>
-                Math.round(7.2) // 7 <br>
-                Math.round(7.7) // 8 <br>
-                Math.round(-7.7) // -8 <br>
-                Math.round(-7.2) // -7
-            </td>
-        </tr>
-        <tr>
-            <td>Math.min(x1, x2,...)</td>
-            <td>매개변수 중 최솟값</td>
-            <td>
-                Math.min(1, 2)  // 1  <br>
-                Math.min(3, 0.5, 0.66)  // 0.5  <br>
-                Math.min(3, 0.5, -0.66) // -0.66
-            </td>
-        </tr>
-        <tr>
-            <td>Math.min(x1, x2,...)</td>
-            <td>매개변수 중 최솟값</td>
-            <td>
-                Math.min(1, 2)  // 1  <br>
-                Math.min(3, 0.5, 0.66)  // 0.5  <br>
-                Math.min(3, 0.5, -0.66) // -0.66
-            </td>
-        </tr>
-    </tbody>
-</table>
+| 함수 | 설명 | 예제 |
+| --- | ------ | --- |
+| Math.abs(x) | x의 절댓값 | Math.abs(-5.5) // 5.5  Math.abs(5.5)  // 5.5 |
+| Math.sign(x) | x의 부호. x가 음수면 -1, 양수면 1, 0이면 0입니다. | Math.sign(-10.5) // -1  Math.sign(6.77)  // 1 |
+| Math.ceil(x) | x의 올림. x보다 크거나 같은 정수 중 가장 작은 수 | Math.ceil(2.2)  // 3  Math.ceil(-3.8) // -3 |
+| Math.floor(x) | x의 내림. x보다 작거나 같은 정수 중 가장 큰 수 | Math.floor(2.8)  // 2  Math.floor(-3.2) // -4 |
+| Math.trunc(x) | x의 버림. 소수점 아래 부분을 모두 제거하고 정수 부분만 남긴 수입니다. | Math.trunc(7.7)  // 7  Math.trunc(-5.8) // -5 |
+| Math.round(x) | x의 반올림 | Math.round(7.2) // 7  Math.round(7.7) // 8  Math.round(-7.7) // -8  Math.round(-7.2) // -7 |
+| Math.min(x1, x2,...) | 매개변수 중 최솟값 | Math.min(1, 2)  // 1  Math.min(3, 0.5, 0.66)  // 0.5  Math.min(3, 0.5, -0.66) // -0.66 |
+| Math.max(x1, x2,...) | 매개변수 중 최댓값 | Math.max(1, 2)  // 2   Math.max(3, 0.5, 0.66)   // 3  Math.max(-3, 0.5, -0.66) // 0.5 |
 
 #### 16.3.2 의사 난수 생성
 자바스크립트에서 난수(정의된 범위 내에서 무작위로 추출된 수)를 생성할때 Math.random()을 사용합니다. 0 이상 1 미만의 숫자를 반환합니다.
 아래표에서 x와 y는 실수, m과 n은 정수이다.
 
-<table>
-    <colgroup>
-        <col style="width:20%">
-        <col style="width:50%">
-        <col style="width:%">
-    </colgroup>
-    <thead>
-        <tr>
-            <th>범위</th>
-            <th>예제</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>0 이상 1 미만</td>
-            <td>Math.random()</td>
-        </tr>
-        <tr>
-            <td>x 이상 y 미만</td>.
-            <td>x + (y-x)*Math.random()</td>
-        </tr>
-        <tr>
-            <td>m 이상 n 미만의 정수</td>
-            <td>m + Math.floor((n-m)*Math.random())</td>
-        </tr>
-        <tr>
-            <td>m 이상 n 이하의 정수</td>
-            <td>m + Math.floor((n-m+1)*Math.random())</td>
-        <tr>
-    </tbody>
-</table>
+| 범위 | 예제 |
+| --- | --- |
+| 0 이상 1 미만 | Math.random() |
+| x 이상 y 미만 | x + (y-x)*Math.random() |
+| m 이상 n 미만의 정수 | m + Math.floor((n-m)*Math.random()) |
+| m 이상 n 이하의 정수 | m + Math.floor((n-m+1)*Math.random()) |
 
 자바스크립트는 의사 난수를 발생기는 시드 숫자를 쓸 수 없다는 단점이 지적되곤 합니다.
 의사 난수를 사용하는 알고리즘 중에는 시드 숫자가 중요할 때가 많습니다. 시드를 사용해 의자 난수를 생성해야 한다면 데이비드 바우의 <a href="https://github.com/davidbau/seedrandom" target="_blank">seedrandom.js</a> 패키지를 보십시오
 
 ### 16.4 삼각함수
-
 사인,코사인,탄젠트, 아크사인, 아크코사인, 아크탄젠트입니다.
 자바스크립트 의 삼각함수는 모두 라디안 값을 기준으로 합니다.
 
-<table>
-    <colgroup>
-        <col style="width:20%">
-        <col style="width:50%">
-        <col style="width:%">
-    </colgroup>
-    <thead>
-        <tr>
-            <th>함수</th>
-            <th>설명</th>
-            <th>예제</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>Math.sin(x)</td>
-            <td>x의 사인</td>
-            <td>
-                Math.sin(Math.PI/2) // 1 <br>
-                Math.sin(Math.PI/4) // ~0.707
-            </td>
-        </tr>
-        <tr>
-            <td>Math.cos(x)</td>
-            <td>x의 코사인</td>
-            <td>
-                Math.cos(Math.PI)   // -1 <br>
-                Math.cos(Math.PI/4) // ~0.707
-            </td>
-        </tr>
-        <tr>
-            <td>Math.tan(x)</td>
-            <td>x의 탄젠트</td>
-            <td>
-                Math.tan(Math.PI/4) // ~1 <br>
-                Math.tan(0)         // 0
-            </td>
-        </tr>
-        <tr>
-            <td>Math.asin(x)</td>
-            <td>x의 아크사인(결과는 라디안입니다.)</td>
-            <td>
-                Math.asin(0)             // 0 <br>
-                Math.asin(Math.SQRT1_2)  // ~0.785
-            </td>
-        </tr>
-        <tr>
-            <td>Math.acos(x)</td>
-            <td>x의 아크코사인(결과는 라디안입니다.)</td>
-            <td>
-                Math.acos(0)             // ~1.57+ <br>
-                Math.acos(Math.SQRT1_2)  // ~0.785+
-            </td>
-        </tr>
-        <tr>
-            <td>Math.atan(x)</td>
-            <td>x의 아크탄젠트(결과는 라디안입니다.</td>
-            <td>
-                Math.atan(0)            // 0 <br>
-                Math.atan(Math.SQRT1_2) // ~0.615
-            </td>
-        </tr>
-        <tr>
-            <td>Math.atan2(y, x)</td>
-            <td>x 축에서 점 (x, y)까지의 시계 반대방향 각도를 라디안으로 나타낸 값</td>
-            <td>
-                Math.atan2(0, 1)  // 0 <br>
-                Math.atan2(1, 1)  // ~0.785
-            </td>
-        </tr>
-    </tbody>
-</table>
+| 함수 | 설명 | 예제 |
+| --- | ------ | --- |
+| Math.sin(x) | x의 사인 | Math.sin(Math.PI/2) // 1  Math.sin(Math.PI/4) // ~0.707 |
+| Math.cos(x) | x의 코사인 | Math.cos(Math.PI)   // -1  Math.cos(Math.PI/4) // ~0.707 |
+| Math.tan(x) | x의 탄젠트 | Math.tan(Math.PI/4) // ~1  Math.tan(0)         // 0 |
+| Math.asin(x) | x의 아크사인(결과는 라디안입니다 | Math.asin(0)             // 0  Math.asin(Math.SQRT1_2)  // ~0.785 |
+| Math.acos(x) | x의 아크코사인(결과는 라디안입니다 | Math.acos(0)             // ~1.57+  Math.acos(Math.SQRT1_2)  // ~0.785+ |
+| Math.atan(x) | x의 아크탄젠트(결과는 라디안입니다 | Math.atan(0)            // 0  Math.atan(Math.SQRT1_2) // ~0.615 |
+| Math.atan2(y, x) | x 축에서 점 (x, y)까지의 시계 반대방향 각도를 라디안으로 나타낸 값 | Math.atan2(0, 1)  // 0  Math.atan2(1, 1)  // ~0.785 |
 
 매개변수에 각도를 쓸 수 없으므로 라디안 값으로 바꿔야한다.
 180으로 나누고  파이(π)를 곱하면 됩니다.
@@ -372,73 +165,13 @@ function read2deg(r) {return r/Math.PI*180; }
 ```
 
 ### 16.4 쌍곡선 함수
-<table>
-    <colgroup>
-        <col style="width:20%">
-        <col style="width:50%">
-        <col style="width:%">
-    </colgroup>
-    <thead>
-        <tr>
-            <th>함수</th>
-            <th>설명</th>
-            <th>예제</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>Math.sinh(x)</td>
-            <td>x의 하이퍼볼릭 사인</td>
-            <td>
-                Math.sinh(0) // 0 <br>
-                Math.sinh(1) // ~1.18
-            </td>
-        </tr>
-        <tr>
-            <td>Math.cosh(x)</td>
-            <td>x의 하이퍼볼릭 코사인</td>
-            <td>
-                Math.cosh(0) // 1 <br>
-                Math.cosh(1) // ~1.54
-            </td>
-        </tr>
-        <tr>
-            <td>Math.tanh(x)</td>
-            <td>x의 하이퍼볼릭 탄젠트</td>
-            <td>
-                Math.tanh(0) // 0 <br>
-                Math.tanh(1) // ~0.762
-            </td>
-        </tr>
-        <tr>
-            <td>Math.asinh(x)</td>
-            <td>x의 하이퍼볼릭 아크 사인</td>
-            <td>
-                Math.asinh(0) // 0 <br>
-                Math.asinh(1) // ~0.881
-            </td>
-        </tr>
-        <tr>
-            <td>Math.acosh(x)</td>
-            <td>x의 하이퍼볼릭 아크 코사인</td>
-            <td>
-                Math.acosh(0) // NaN <br>
-                Math.acosh(1) // 0
-            </td>
-        </tr>
-        <tr>
-            <td>Math.atanh(x)</td>
-            <td>x의 하이퍼볼릭 아크 탄젠트</td>
-            <td>
-                Math.atanh(0) // 0 <br>
-                Math.atanh(0) // ~0.615
-            </td>
-        </tr>
-    </tbody>
-</table>
+| 함수 | 설명 | 예제 |
+| --- | ------ | --- |
+| Math.sinh(x) | 설명 | x의 퍼볼릭 사인 | Math.sinh(0) // 0  Math.sinh(1) // ~1.18 |
+| Math.cosh(x) | x의 하이퍼볼릭 코사인 | Math.cosh(0) // 1  Math.cosh(1) // ~1.54 |
+| Math.tanh(x) | x의 하이퍼볼릭 탄젠트 | Math.tanh(0) // 0  Math.tanh(1) // ~0.762 |
+| Math.asinh(x) | x의 하이퍼볼릭 아크 사인 | Math.asinh(0) // 0  Math.asinh(1) // ~0.881 |
+| Math.acosh(x) | x의 하이퍼볼릭 아크 코사인 | Math.acosh(0) // NaN  Math.acosh(1) // 0 |
+| Math.atanh(x) | x의 하이퍼볼릭 아크 탄젠트 | Math.atanh(0) // 0  Math.atanh(0) // ~0.615 |
 
-| Command | Description |
-| --- | --- |
-| git status | List all new or modified files |
-| git diff | Show file differences that haven't been staged |
 
