@@ -116,7 +116,7 @@ Math.SQRT2   // 2의 제곱근 : ~1.414
                 Math.pow(2, 3)      // 8  <br>
                 Math.pow(1.7, 2.3)  // ~3.39
             </td>
-        <tr>
+        </tr>
         <tr>
             <td>Math.sqrt(x)</td>
             <td>주어진 숫자에 루트(√ )</td>
@@ -124,7 +124,7 @@ Math.SQRT2   // 2의 제곱근 : ~1.414
                 Math.sqrt(16)    // 4 <br>
                 Math.sqrt(15.5)  // ~3.94
             </td>
-        <tr>
+        </tr>
         <tr>
             <td>Math.cbrt(x)</td>
             <td>세제곱근. x는 Math.pow(x, 1/3)와 같습니다.</td>
@@ -132,7 +132,7 @@ Math.SQRT2   // 2의 제곱근 : ~1.414
                 Math.cbrt(27)   // 3 <br>
                 Math.cbrt(22)   // ~2.8
             </td>
-        <tr>
+        </tr>
         <tr>
             <td>Math.exp(x)</td>
             <td>e의 x제곱. Math.pow(Math.E, x)와 같습니다.</td>
@@ -140,7 +140,7 @@ Math.SQRT2   // 2의 제곱근 : ~1.414
                 Math.exp(1)     // ~2.718 <br>
                 Math.exp(5.5)   // ~244.7
             </td>
-        <tr>
+        </tr>
         <tr>
             <td>Math.expm1(x)</td>
             <td>e의 x제곱 - 1.  Math.exp(x) - 1와 같습니다.</td>
@@ -148,7 +148,7 @@ Math.SQRT2   // 2의 제곱근 : ~1.414
                 Math.expm1(1)     // ~1.718 <br>
                 ath.expm1(5.5)   // ~243.7
             </td>
-        <tr>
+        </tr>
         <tr>
             <td>Math.hypot (x1, x2,...)</td>
             <td>매개변수의 제곱을 합한 수. 루트(√ )( x1의제곱 + x2의 제곱 + ... )의 제곱근입니다.  </td>
@@ -156,7 +156,7 @@ Math.SQRT2   // 2의 제곱근 : ~1.414
                 Math.hypot(3, 4)    // 5<br>
                 Math.hypot(2, 3, 4) // ~5.36
             </td>
-        <tr>
+        </tr>
     </tbody>
 </table>
 
@@ -180,7 +180,7 @@ es6에서 자주 쓰이는 사용로그 Math.log10 함수가 생겼습니다.
                 Math.log(Math.E) // 1 <br>
                 Math.log(17.5)   // ~2.86
             </td>
-        <tr>
+        </tr>
         <tr>
             <td>Math.log10(x)</td>
             <td>x의 상용로그. Math.log(x)/Math.log(10)와 같습니다.</td>
@@ -188,7 +188,7 @@ es6에서 자주 쓰이는 사용로그 Math.log10 함수가 생겼습니다.
                 Math.log10(10)   // 1 <br>
                 Math.log10(16.7) // ~1.22
             </td>
-        <tr>
+        </tr>
         <tr>
             <td>Math.log2(x)</td>
             <td>x의 밑수가 2인 로그. Math.log(x)/Math.log(2)와 같습니다.</td>
@@ -196,7 +196,7 @@ es6에서 자주 쓰이는 사용로그 Math.log10 함수가 생겼습니다.
                 Math.log2(2)   // 1  <br>
                 Math.log2(5)   // ~2.32
             </td>
-        <tr>
+        </tr>
         <tr>
             <td>Math.log1p(x)</td>
             <td>1 + x의 자연로그. Math.log(1 + x)와 같습니다.</td>
@@ -204,7 +204,7 @@ es6에서 자주 쓰이는 사용로그 Math.log10 함수가 생겼습니다.
                 Math.log1p(Math.E - 1) // 1 <br>
                 Math.log1p(17.5)    // ~2.92
             </td>
-        <tr>
+        </tr>
     </tbody>
 </table>
 
@@ -227,7 +227,7 @@ es6에서 자주 쓰이는 사용로그 Math.log10 함수가 생겼습니다.
                 Math.abs(-5.5) // 5.5  <br>
                 Math.abs(5.5)  // 5.5
             </td>
-        <tr>
+        </tr>
         <tr>
             <td>Math.sign(x)</td>
             <td>x의 부호. x가 음수면 -1, 양수면 1, 0이면 0입니다.</td>
@@ -235,7 +235,7 @@ es6에서 자주 쓰이는 사용로그 Math.log10 함수가 생겼습니다.
                 Math.sign(-10.5) // -1  <br>
                 Math.sign(6.77)  // 1
             </td>
-        <tr>
+        </tr>
         <tr>
             <td>Math.ceil(x)</td>
             <td>x의 올림. x보다 크거나 같은 정수 중 가장 작은 수</td>
@@ -243,7 +243,7 @@ es6에서 자주 쓰이는 사용로그 Math.log10 함수가 생겼습니다.
                 Math.ceil(2.2)  // 3   <br>
                 Math.ceil(-3.8) // -3
             </td>
-        <tr>
+        </tr>
         <tr>
             <td>Math.floor(x)</td>
             <td>x의 내림. x보다 작거나 같은 정수 중 가장 큰 수</td>
@@ -251,7 +251,7 @@ es6에서 자주 쓰이는 사용로그 Math.log10 함수가 생겼습니다.
                 Math.floor(2.8)  // 2 <br>
                 Math.floor(-3.2) // -4
             </td>
-        <tr>
+        </tr>
         <tr>
             <td>Math.trunc(x)</td>
             <td>x의 버림. 소수점 아래 부분을 모두 제거하고 정수 부분만 남긴 수입니다.</td>
@@ -259,7 +259,7 @@ es6에서 자주 쓰이는 사용로그 Math.log10 함수가 생겼습니다.
                 Math.trunc(7.7)  // 7 <br>
                 Math.trunc(-5.8) // -5
             </td>
-        <tr>
+        </tr>
         <tr>
             <td>Math.round(x)</td>
             <td>x의 반올림</td>
@@ -269,16 +269,7 @@ es6에서 자주 쓰이는 사용로그 Math.log10 함수가 생겼습니다.
                 Math.round(-7.7) // -8 <br>
                 Math.round(-7.2) // -7
             </td>
-        <tr>
-        <tr>
-            <td>Math.min(x1, x2,...)</td>
-            <td>매개변수 중 최솟값</td>
-            <td>
-                Math.min(1, 2)  // 1  <br>
-                Math.min(3, 0.5, 0.66)  // 0.5  <br>
-                Math.min(3, 0.5, -0.66) // -0.66
-            </td>
-        <tr>
+        </tr>
         <tr>
             <td>Math.min(x1, x2,...)</td>
             <td>매개변수 중 최솟값</td>
@@ -287,7 +278,16 @@ es6에서 자주 쓰이는 사용로그 Math.log10 함수가 생겼습니다.
                 Math.min(3, 0.5, 0.66)  // 0.5  <br>
                 Math.min(3, 0.5, -0.66) // -0.66
             </td>
+        </tr>
         <tr>
+            <td>Math.min(x1, x2,...)</td>
+            <td>매개변수 중 최솟값</td>
+            <td>
+                Math.min(1, 2)  // 1  <br>
+                Math.min(3, 0.5, 0.66)  // 0.5  <br>
+                Math.min(3, 0.5, -0.66) // -0.66
+            </td>
+        </tr>
     </tbody>
 </table>
 
@@ -306,15 +306,15 @@ es6에서 자주 쓰이는 사용로그 Math.log10 함수가 생겼습니다.
         <tr>
             <td>0 이상 1 미만</td>
             <td>Math.random()</td>
-        <tr>
+        </tr>
         <tr>
             <td>x 이상 y 미만</td>.
             <td>x + (y-x)*Math.random()</td>
-        <tr>
+        </tr>
         <tr>
             <td>m 이상 n 미만의 정수</td>
             <td>m + Math.floor((n-m)*Math.random())</td>
-        <tr>
+        </tr>
         <tr>
             <td>m 이상 n 이하의 정수</td>
             <td>m + Math.floor((n-m+1)*Math.random())</td>
@@ -346,7 +346,7 @@ es6에서 자주 쓰이는 사용로그 Math.log10 함수가 생겼습니다.
                 Math.sin(Math.PI/2) // 1 <br>
                 Math.sin(Math.PI/4) // ~0.707
             </td>
-        <tr>
+        </tr>
         <tr>
             <td>Math.cos(x)</td>
             <td>x의 코사인</td>
@@ -354,7 +354,7 @@ es6에서 자주 쓰이는 사용로그 Math.log10 함수가 생겼습니다.
                 Math.cos(Math.PI)   // -1 <br>
                 Math.cos(Math.PI/4) // ~0.707
             </td>
-        <tr>
+        </tr>
         <tr>
             <td>Math.tan(x)</td>
             <td>x의 탄젠트</td>
@@ -362,7 +362,7 @@ es6에서 자주 쓰이는 사용로그 Math.log10 함수가 생겼습니다.
                 Math.tan(Math.PI/4) // ~1 <br>
                 Math.tan(0)         // 0
             </td>
-        <tr>
+        </tr>
         <tr>
             <td>Math.asin(x)</td>
             <td>x의 아크사인(결과는 라디안입니다.)</td>
@@ -370,7 +370,7 @@ es6에서 자주 쓰이는 사용로그 Math.log10 함수가 생겼습니다.
                 Math.asin(0)             // 0 <br>
                 Math.asin(Math.SQRT1_2)  // ~0.785
             </td>
-        <tr>
+        </tr>
         <tr>
             <td>Math.acos(x)</td>
             <td>x의 아크코사인(결과는 라디안입니다.)</td>
@@ -378,7 +378,7 @@ es6에서 자주 쓰이는 사용로그 Math.log10 함수가 생겼습니다.
                 Math.acos(0)             // ~1.57+ <br>
                 Math.acos(Math.SQRT1_2)  // ~0.785+
             </td>
-        <tr>
+        </tr>
         <tr>
             <td>Math.atan(x)</td>
             <td>x의 아크탄젠트(결과는 라디안입니다.</td>
@@ -386,7 +386,7 @@ es6에서 자주 쓰이는 사용로그 Math.log10 함수가 생겼습니다.
                 Math.atan(0)            // 0 <br>
                 Math.atan(Math.SQRT1_2) // ~0.615
             </td>
-        <tr>
+        </tr>
         <tr>
             <td>Math.atan2(y, x)</td>
             <td>x 축에서 점 (x, y)까지의 시계 반대방향 각도를 라디안으로 나타낸 값</td>
@@ -394,7 +394,7 @@ es6에서 자주 쓰이는 사용로그 Math.log10 함수가 생겼습니다.
                 Math.atan2(0, 1)  // 0 <br>
                 Math.atan2(1, 1)  // ~0.785
             </td>
-        <tr>
+        </tr>
     </tbody>
 </table>
 
@@ -422,7 +422,7 @@ function read2deg(r) {return r/Math.PI*180; }
                 Math.sinh(0) // 0 <br>
                 Math.sinh(1) // ~1.18
             </td>
-        <tr>
+        </tr>
         <tr>
             <td>Math.cosh(x)</td>
             <td>x의 하이퍼볼릭 코사인</td>
@@ -430,7 +430,7 @@ function read2deg(r) {return r/Math.PI*180; }
                 Math.cosh(0) // 1 <br>
                 Math.cosh(1) // ~1.54
             </td>
-        <tr>
+        </tr>
         <tr>
             <td>Math.tanh(x)</td>
             <td>x의 하이퍼볼릭 탄젠트</td>
@@ -438,7 +438,7 @@ function read2deg(r) {return r/Math.PI*180; }
                 Math.tanh(0) // 0 <br>
                 Math.tanh(1) // ~0.762
             </td>
-        <tr>
+        </tr>
         <tr>
             <td>Math.asinh(x)</td>
             <td>x의 하이퍼볼릭 아크 사인</td>
@@ -446,7 +446,7 @@ function read2deg(r) {return r/Math.PI*180; }
                 Math.asinh(0) // 0 <br>
                 Math.asinh(1) // ~0.881
             </td>
-        <tr>
+        </tr>
         <tr>
             <td>Math.acosh(x)</td>
             <td>x의 하이퍼볼릭 아크 코사인</td>
@@ -454,7 +454,7 @@ function read2deg(r) {return r/Math.PI*180; }
                 Math.acosh(0) // NaN <br>
                 Math.acosh(1) // 0
             </td>
-        <tr>
+        </tr>
         <tr>
             <td>Math.atanh(x)</td>
             <td>x의 하이퍼볼릭 아크 탄젠트</td>
@@ -462,6 +462,6 @@ function read2deg(r) {return r/Math.PI*180; }
                 Math.atanh(0) // 0 <br>
                 Math.atanh(0) // ~0.615
             </td>
-        <tr>
+        </tr>
     </tbody>
 </table>
