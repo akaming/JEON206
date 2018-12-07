@@ -95,70 +95,16 @@ Math.SQRT2   // 2의 제곱근 : ~1.414
 제곱 관련 기본 함수는 Math.pow 이며 제곱근, 세제곱근, e의 거듭제곱 등 자주 쓰이는 연산에는 간편 함수가 있습니다.
 
 #### 제곱．제곱근 관련함수
-<table>
-    <colgroup>
-        <col style="width:20%">
-        <col style="width:50%">
-        <col style="width:%">
-    </colgroup>
-    <thead>
-        <tr>
-            <th>함수</th>
-            <th>설명</th>
-            <th>예제</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>Math.pow(x,y)</td>
-            <td>x 의 y 제곱</td>
-            <td>
-                Math.pow(2, 3)      // 8  <br>
-                Math.pow(1.7, 2.3)  // ~3.39
-            </td>
-        </tr>
-        <tr>
-            <td>Math.sqrt(x)</td>
-            <td>주어진 숫자에 루트(√ )</td>
-            <td>
-                Math.sqrt(16)    // 4 <br>
-                Math.sqrt(15.5)  // ~3.94
-            </td>
-        </tr>
-        <tr>
-            <td>Math.cbrt(x)</td>
-            <td>세제곱근. x는 Math.pow(x, 1/3)와 같습니다.</td>
-            <td>
-                Math.cbrt(27)   // 3 <br>
-                Math.cbrt(22)   // ~2.8
-            </td>
-        </tr>
-        <tr>
-            <td>Math.exp(x)</td>
-            <td>e의 x제곱. Math.pow(Math.E, x)와 같습니다.</td>
-            <td>
-                Math.exp(1)     // ~2.718 <br>
-                Math.exp(5.5)   // ~244.7
-            </td>
-        </tr>
-        <tr>
-            <td>Math.expm1(x)</td>
-            <td>e의 x제곱 - 1.  Math.exp(x) - 1와 같습니다.</td>
-            <td>
-                Math.expm1(1)     // ~1.718 <br>
-                ath.expm1(5.5)   // ~243.7
-            </td>
-        </tr>
-        <tr>
-            <td>Math.hypot (x1, x2,...)</td>
-            <td>매개변수의 제곱을 합한 수. 루트(√ )( x1의제곱 + x2의 제곱 + ... )의 제곱근입니다.  </td>
-            <td>
-                Math.hypot(3, 4)    // 5<br>
-                Math.hypot(2, 3, 4) // ~5.36
-            </td>
-        </tr>
-    </tbody>
-</table>
+
+| 함수 | 설명 | 예제 |
+| --- | --- | --- |
+| Math.pow(x,y) | x 의 y 제곱 | Math.pow(2, 3)      // 8  <br>Math.pow(1.7, 2.3)  // ~3.39 |
+| Math.sqrt(x) | 주어진 숫자에 루트(√ ) | Math.sqrt(16)    // 4 <br>Math.sqrt(15.5)  // ~3.94 |
+| Math.cbrt(x) | 세제곱근. x는 Math.pow(x, 1/3)와 같습니다. | Math.cbrt(27)   // 3 <br>Math.cbrt(22)   // ~2.8 |
+| Math.exp(x) | e의 x제곱. Math.pow(Math.E, x)와 같습니다. | Math.exp(1)     // ~2.718  Math.exp(5.5)   // ~244.7 |
+| Math.expm1(x) | e의 x제곱 - 1.  Math.exp(x) - 1와 같습니다. | Math.expm1(1)     // ~1.718  Math.expm1(5.5)   // ~243.7 |
+| Math.hypot (x1, x2,...) | 매개변수의 제곱을 합한 수. 루트(√ )( x1의제곱 + x2의 제곱 + ... )의 제곱근입니다. | Math.hypot(3, 4)    // 5  Math.hypot(2, 3, 4) // ~5.36 |
+
 
 #### 16.3.2 로그함수 
 자바스크립트의 log는 자연로그이다. 자연로그의 함수는 Math.log 이다.
@@ -491,7 +437,8 @@ function read2deg(r) {return r/Math.PI*180; }
     </tbody>
 </table>
 
-| First Header  | Second Header |
-| ------------- | ------------- |
-| Content Cell  | Content Cell  |
-| Content Cell  | Content Cell  |
+| Command | Description |
+| --- | --- |
+| git status | List all new or modified files |
+| git diff | Show file differences that haven't been staged |
+
