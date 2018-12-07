@@ -97,9 +97,9 @@ Math.SQRT2   // 2의 제곱근 : ~1.414
 #### 제곱．제곱근 관련함수
 <table>
     <colgroup>
-        <col style="width:20%"/>
-        <col style="width:20%"/>
-        <col style="width:20%"/>
+        <col style="width:20%">
+        <col style="width:50%">
+        <col style="width:%">
     </colgroup>
     <thead>
         <tr>
@@ -165,6 +165,11 @@ Math.SQRT2   // 2의 제곱근 : ~1.414
 es6에서 자주 쓰이는 사용로그 Math.log10 함수가 생겼습니다.
 
 <table>
+    <colgroup>
+        <col style="width:20%">
+        <col style="width:50%">
+        <col style="width:%">
+    </colgroup>
     <thead>
         <tr>
             <th>함수</th>
@@ -212,6 +217,11 @@ es6에서 자주 쓰이는 사용로그 Math.log10 함수가 생겼습니다.
 절댓값, 부호, 배열 의 최솟값/ 최댓값 등 숫자 관련 함수
 
 <table>
+    <colgroup>
+        <col style="width:20%">
+        <col style="width:50%">
+        <col style="width:%">
+    </colgroup>
     <thead>
         <tr>
             <th>함수</th>
@@ -296,6 +306,11 @@ es6에서 자주 쓰이는 사용로그 Math.log10 함수가 생겼습니다.
 아래표에서 x와 y는 실수, m과 n은 정수이다.
 
 <table>
+    <colgroup>
+        <col style="width:20%">
+        <col style="width:50%">
+        <col style="width:%">
+    </colgroup>
     <thead>
         <tr>
             <th>범위</th>
@@ -331,6 +346,11 @@ es6에서 자주 쓰이는 사용로그 Math.log10 함수가 생겼습니다.
 자바스크립트 의 삼각함수는 모두 라디안 값을 기준으로 합니다.
 
 <table>
+    <colgroup>
+        <col style="width:20%">
+        <col style="width:50%">
+        <col style="width:%">
+    </colgroup>
     <thead>
         <tr>
             <th>함수</th>
@@ -407,6 +427,11 @@ function read2deg(r) {return r/Math.PI*180; }
 
 ### 16.4 쌍곡선 함수
 <table>
+    <colgroup>
+        <col style="width:20%">
+        <col style="width:50%">
+        <col style="width:%">
+    </colgroup>
     <thead>
         <tr>
             <th>함수</th>
